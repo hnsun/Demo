@@ -18,6 +18,7 @@ import com.hnsun.myaccount.R;
 import com.hnsun.myaccount.fragment.common.BaseFragment;
 import com.hnsun.myaccount.mess.TextChangeAdapter;
 import com.hnsun.myaccount.util.CodeBoss;
+import com.hnsun.myaccount.util.view.click.OnNoDoubleClickListener;
 
 /**
  * 注册碎片
@@ -58,7 +59,7 @@ public class RegisterFragment extends BaseFragment {
 		ivPasswordEye.setOnTouchListener(onPwdTouchListener);
 		ivPasswordAgainDelete.setOnClickListener(onClickListener);
 		ivPasswordAgainEye.setOnTouchListener(onPwdAgainTouchListener);
-		btnRegister.setOnClickListener(onClickListener);
+		btnRegister.setOnClickListener(onNoDoubleClickListener);
 		btnLogin.setOnClickListener(onClickListener);
 		btnForgetPassword.setOnClickListener(onClickListener);
 	}
@@ -142,6 +143,19 @@ public class RegisterFragment extends BaseFragment {
 		}
 	};
 	
+	private OnNoDoubleClickListener onNoDoubleClickListener = new OnNoDoubleClickListener() {
+		
+		@Override
+		public void onNoDoubleClick(View view) {
+			switch(view.getId()) {
+				case R.id.btnRegister:
+					//注册信息判断
+					getOnSkipClickListenter(RegisterFragment.TO_REGISTER, etAccount.getText(), etPassword.getText(), etPasswordAgain.getText()).onAction(view);
+					break;
+			}
+		}
+	};
+	
 	private OnClickListener onClickListener = new OnClickListener() {
 		
 		@Override
@@ -154,10 +168,6 @@ public class RegisterFragment extends BaseFragment {
 					etPasswordAgain.setText(""); 
 					break;
 				case R.id.btnLogin: getOnSkipClickListenter(RegisterFragment.TO_LOGIN).onAction(view); break;
-				case R.id.btnRegister:
-					//登录信息判断
-					getOnSkipClickListenter(RegisterFragment.TO_REGISTER, etAccount.getText(), etPassword.getText(), etPasswordAgain.getText()).onAction(view);
-					break;
 				case R.id.btnForgetPassword: getOnSkipClickListenter(RegisterFragment.TO_FORGETPASSWORD).onAction(view); break;
 			}
 		}

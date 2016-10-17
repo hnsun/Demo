@@ -23,7 +23,7 @@ public abstract class OnNoDoubleClickListener implements OnClickListener {
 	public void onClick(View view) {
 		if(canClick) { //某段时间内点击不执行事件
 			long currentTime = Calendar.getInstance().getTimeInMillis();
-			if((currentTime - lastClickTime) > DELAY_TIME) { //超过时间可以执行
+			if((currentTime - lastClickTime) > OnNoDoubleClickListener.DELAY_TIME) { //超过时间可以执行
 				lastClickTime = currentTime;
 				onNoDoubleClick(view);
 			}

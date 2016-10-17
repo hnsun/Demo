@@ -1,5 +1,7 @@
 package com.hnsun.myaccount;
 
+import java.util.Date;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,7 +9,9 @@ import android.os.Bundle;
 import com.hnsun.myaccount.activity.InitActivity;
 import com.hnsun.myaccount.activity.UserMainActivity;
 import com.hnsun.myaccount.activity.common.BaseActivity;
+import com.hnsun.myaccount.model.dbo.TblFile;
 import com.hnsun.myaccount.service.MonitorService;
+import com.hnsun.myaccount.support.offline.TblFileOffline;
 import com.hnsun.myaccount.util.CodeBoss;
 import com.hnsun.myaccount.util.UtilBoss;
 import com.hnsun.myaccount.util.test.TestManager;
@@ -41,27 +45,30 @@ public class MainActivity extends BaseActivity {
 	protected void initAction(Bundle savedInstanceState) {}
 
 	private void fillData() {
-//		TblFile file1 = new TblFile();
-//		file1.setFileDate(new Date());
-//		file1.setFileDesc("弹着吉他唱着歌");
-//		file1.setFilePlatform('A');
-//		file1.setFileUrl("http://wt.sc.chinaz.com/Files/DownLoad/pic9/201606/fpic5106.rar");
-//		file1.setFileName("吉他.rar");
-//		TblFileOffline.insert(instance, file1);
-//		TblFile file2 = new TblFile();
-//		file2.setFileDate(new Date());
-//		file2.setFileDesc("左手右手一个慢动作");
-//		file2.setFilePlatform('A');
-//		file2.setFileUrl("http://wt.sc.chinaz.com/Files/DownLoad/pic9/201606/apic21392.rar");
-//		file2.setFileName("拉手.rar");
-//		TblFileOffline.insert(instance, file2);
-//		TblFile file3 = new TblFile();
-//		file3.setFileDate(new Date());
-//		file3.setFileDesc("我喜欢柠檬的味道");
-//		file3.setFilePlatform('A');
-//		file3.setFileUrl("http://wt.sc.chinaz.com/Files/DownLoad/pic9/201606/apic21402.rar");
-//		file3.setFileName("柠檬.rar");
-//		TblFileOffline.insert(instance, file3);
+		TblFile file = TblFileOffline.getFromUrl(instance, "http://wt.sc.chinaz.com/Files/DownLoad/pic9/201606/fpic5106.rar");
+		if(UtilBoss.ObjUtil.isNull(file)) {
+			TblFile file1 = new TblFile();
+			file1.setFileDate(new Date());
+			file1.setFileDesc("弹着吉他唱着歌");
+			file1.setFilePlatform('A');
+			file1.setFileUrl("http://wt.sc.chinaz.com/Files/DownLoad/pic9/201606/fpic5106.rar");
+			file1.setFileName("吉他.rar");
+			TblFileOffline.insert(instance, file1);
+			TblFile file2 = new TblFile();
+			file2.setFileDate(new Date());
+			file2.setFileDesc("左手右手一个慢动作");
+			file2.setFilePlatform('A');
+			file2.setFileUrl("http://wt.sc.chinaz.com/Files/DownLoad/pic9/201606/apic21392.rar");
+			file2.setFileName("拉手.rar");
+			TblFileOffline.insert(instance, file2);
+			TblFile file3 = new TblFile();
+			file3.setFileDate(new Date());
+			file3.setFileDesc("我喜欢柠檬的味道");
+			file3.setFilePlatform('A');
+			file3.setFileUrl("http://wt.sc.chinaz.com/Files/DownLoad/pic9/201606/apic21402.rar");
+			file3.setFileName("柠檬.rar");
+			TblFileOffline.insert(instance, file3);
+		}
 	}
 	
 	private Context instance;

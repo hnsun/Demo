@@ -17,6 +17,7 @@ import com.hnsun.myaccount.R;
 import com.hnsun.myaccount.fragment.common.BaseFragment;
 import com.hnsun.myaccount.mess.TextChangeAdapter;
 import com.hnsun.myaccount.util.CodeBoss;
+import com.hnsun.myaccount.util.view.click.OnNoDoubleClickListener;
 
 /**
  * 登陆碎片
@@ -50,7 +51,7 @@ public class LoginFragment extends BaseFragment {
 		ivAccountDelete.setOnClickListener(onClickListener);
 		ivPasswordDelete.setOnClickListener(onClickListener);
 		ivPasswordEye.setOnTouchListener(onTouchListener);
-		btnLogin.setOnClickListener(onClickListener);
+		btnLogin.setOnClickListener(onNoDoubleClickListener);
 		btnRegister.setOnClickListener(onClickListener);
 		btnForgetPassword.setOnClickListener(onClickListener);
 	}
@@ -97,6 +98,19 @@ public class LoginFragment extends BaseFragment {
 		}
 	};
 	
+	private OnNoDoubleClickListener onNoDoubleClickListener = new OnNoDoubleClickListener() {
+		
+		@Override
+		public void onNoDoubleClick(View view) {
+			switch(view.getId()) {
+				case R.id.btnLogin:
+					//登录信息判断
+					getOnSkipClickListenter(LoginFragment.TO_LOGIN, etAccount.getText(), etPassword.getText()).onAction(view);
+					break;
+			}
+		}
+	};
+	
 	private OnClickListener onClickListener = new OnClickListener() {
 		
 		@Override
@@ -104,10 +118,6 @@ public class LoginFragment extends BaseFragment {
 			switch(view.getId()) {
 				case R.id.ivAccountDelete: etAccount.setText("");
 				case R.id.ivPasswordDelete: etPassword.setText(""); break;
-				case R.id.btnLogin:
-					//登录信息判断
-					getOnSkipClickListenter(LoginFragment.TO_LOGIN, etAccount.getText(), etPassword.getText()).onAction(view);
-					break;
 				case R.id.btnRegister: getOnSkipClickListenter(LoginFragment.TO_REGISTER).onAction(view); break;
 				case R.id.btnForgetPassword: getOnSkipClickListenter(LoginFragment.TO_FORGETPASSWORD).onAction(view); break;
 			}
