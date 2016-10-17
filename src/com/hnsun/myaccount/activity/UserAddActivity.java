@@ -16,6 +16,7 @@ import com.hnsun.myaccount.activity.common.BaseActivity;
 import com.hnsun.myaccount.mess.TextChangeAdapter;
 import com.hnsun.myaccount.model.dbo.TblUser;
 import com.hnsun.myaccount.support.offline.TblUserOffline;
+import com.hnsun.myaccount.util.UtilBoss;
 import com.hnsun.myaccount.util.platform.ViewUtil;
 import com.hnsun.myaccount.util.view.CharacterParser;
 
@@ -81,14 +82,17 @@ public class UserAddActivity extends BaseActivity {
 			switch(view.getId()) {
 				case R.id.ivAccountDelete: etAccount.setText(""); break;
 				case R.id.btnAdd: 
-					TblUser user = new TblUser();
-					user.setUserLogname(etAccount.getText().toString());
-					user.setUserLogpassword(etAccount.getText().toString());
-					user.setUserCnname(etAccount.getText().toString());
-					user.setUserEnname(CharacterParser.getInstance().spellingStr(etAccount.getText().toString()));
-					TblUserOffline.insert(instance, user);
-					ViewUtil.displayToast(instance, R.string.msg_success);
-					((UserAddActivity) instance).finish();
+					String text = etAccount.getText().toString();
+					if(!UtilBoss.StrUtil.isEmpty(text)) {
+						TblUser user = new TblUser();
+						user.setUserLogname(text);
+						user.setUserLogpassword(text);
+						user.setUserCnname(text);
+						user.setUserEnname(CharacterParser.getInstance().spellingStr(text));
+						TblUserOffline.insert(instance, user);
+						ViewUtil.displayToast(instance, R.string.msg_success);
+						((UserAddActivity) instance).finish();
+					} else ViewUtil.displayToast(instance, "随便填上一个名称试试");
 					break;
 			}
 		}
