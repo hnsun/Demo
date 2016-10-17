@@ -1,0 +1,12 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/flayoutWrapper"
+	android:padding="0dp"
+	android:background="@color/bgUserHome"
+	android:scrollbars="none"
+    tools:context="${relativePackage}.${activityClass}">
+    
+	<include layout="@layout/layout_home" />
+</ScrollView>

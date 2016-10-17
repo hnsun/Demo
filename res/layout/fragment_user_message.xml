@@ -1,0 +1,9 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/flayoutWrapper"
+	android:background="@color/skyblue"
+    tools:context="${relativePackage}.${activityClass}">
+    
+</RelativeLayout>

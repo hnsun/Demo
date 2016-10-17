@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+    android:layout_height="55dp"
+    android:orientation="horizontal"
+    android:padding="15dp"
+    android:background="@color/bgDownloadCusLayout"
+    android:gravity="center"
+    tools:context="${relativePackage}.${activityClass}">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        
+        <ImageView 
+            style="@style/DefaultImageView"
+            android:id="@+id/ivArrow"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_arrow_down"
+            android:contentDescription="@null" />
+        
+        <ProgressBar 
+            style="@style/DefaultCircleProgressBar"
+            android:id="@+id/pbLoading"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="15dp"
+        android:orientation="vertical"
+		android:gravity="center">
+
+        <TextView
+            style="@style/DefaultTextView"
+            android:id="@+id/txtvDesc"
+            android:layout_width="wrap_content"
+            android:text="@string/txt_refreshable_refresh_pull" />
+
+        <TextView
+            style="@style/DefaultTextView"
+            android:id="@+id/txtvUpdatedAt"
+            android:layout_width="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/txt_refreshable_updated_at" />
+    </LinearLayout>
+</LinearLayout>

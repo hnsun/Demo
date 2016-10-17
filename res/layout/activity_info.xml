@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/layoutWrapper"
+	android:tag="#SKIN:"
+	android:background="@color/bgInfo"
+    tools:context="${relativePackage}.${activityClass}">
+    
+    <com.hnsun.myaccount.view.BrandView
+        style="@style/DefaultBrandView"
+        android:id="@+id/bvBrand"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        auto:mainColor="@color/maroon"
+        auto:descColor="@color/white"
+        auto:mainSize="42sp"
+        auto:descSize="16sp" />
+    
+    <Button 
+        style="@style/DefaultButton"
+        android:id="@+id/btnReturn"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/bvBrand"
+        android:layout_marginRight="15dp"
+        android:textColor="@drawable/txt_incolor"
+        android:textSize="14sp"
+        android:text="@string/btn_return_home"
+        android:background="@color/transparent" />
+    
+    <GridView 
+        style="@style/DefaultGridView"
+        android:id="@+id/gvMenu"
+        android:layout_below="@id/bvBrand"
+        android:layout_margin="15dp"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp">
+    </GridView>
+</RelativeLayout>

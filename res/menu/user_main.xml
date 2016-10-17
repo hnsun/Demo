@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <item 
+        android:id="@+id/btnRecordAccount"
+        android:showAsAction="always"
+        android:orderInCategory="50"
+        android:icon="@drawable/ic_bar_record"
+        android:title="@string/btn_recordaccount" />
+    
+    <item 
+        android:id="@+id/btnInfo"
+        android:showAsAction="never"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_bar_info"
+        android:title="@string/btn_information" />
+    <!-- @android:drawable/ic_menu_info_details -->
+    
+    <item 
+        android:id="@+id/btnMall"
+        android:showAsAction="never"
+        android:orderInCategory="150"
+        android:icon="@drawable/ic_bar_mall"
+        android:title="@string/btn_mall" />
+    
+    <item 
+        android:id="@+id/btnTest"
+        android:showAsAction="never"
+        android:orderInCategory="300"
+        android:icon="@drawable/ic_bar_test"
+        android:title="@string/btn_test" />
+</menu>

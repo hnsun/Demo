@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/layoutWrapper"
+	android:tag="#SKIN:"
+	android:background="@color/bgMall"
+    tools:context="${relativePackage}.${activityClass}">
+    
+    <TextView 
+        style="@style/DefaultTextView"
+        android:id="@+id/txtvTitle"
+		android:tag="#SKIN:"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:textSize="28sp"
+        android:textColor="@color/defaultFontOn"
+        android:text="@string/app_mall" />
+    
+    <TextView 
+        style="@style/DefaultTextView"
+        android:layout_below="@id/txtvTitle"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"
+        android:text="@string/msg_welcome" />
+    
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        
+        <Button 
+            style="@style/ActMallButton"
+            android:id="@+id/btnArticle"
+            android:layout_alignParentLeft="true"
+            android:text="@string/txt_article"
+            android:background="@drawable/btn_business_mall_article" />
+        
+        <Button 
+            style="@style/ActMallButton"
+            android:id="@+id/btnFile"
+            android:layout_toRightOf="@id/btnArticle"
+            android:text="@string/txt_file"
+            android:background="@drawable/btn_business_mall_file" />
+        
+        <Button 
+            style="@style/ActMallButton"
+            android:id="@+id/btnCommodity"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/btnArticle"
+            android:text="@string/txt_commodity"
+            android:background="@drawable/btn_business_mall_commodity" />
+        
+        <Button 
+            style="@style/ActMallButton"
+            android:id="@+id/btnReturn"
+            android:layout_toRightOf="@id/btnArticle"
+            android:layout_below="@id/btnFile"
+            android:text="@string/btn_return"
+            android:background="@drawable/btn_business_mall_return" />
+    </RelativeLayout>
+    
+    <TextView 
+        style="@style/DefaultTextView"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:text="@string/app_copyright" />
+</RelativeLayout>

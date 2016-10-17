@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/layoutWrapper"
+	android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}">
+
+    <com.hnsun.myaccount.view.ColonTextView
+        style="@style/DefaultTextView"
+    	android:layout_marginTop="25dp"
+    	android:layout_marginBottom="10dp"
+    	android:layout_marginLeft="10dp"
+    	android:textSize="18sp"
+        android:text="@string/txt_usercontact_new"
+        android:gravity="left|center_vertical" />
+        
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+           
+        <EditText 
+			style="@style/DefaultEditText"
+            android:id="@+id/etAccount"
+            android:paddingLeft="@dimen/et_icon_padding_left"
+            android:paddingRight="@dimen/et_icon_padding_right"
+            android:hint="@string/tip_account" />
+           
+         <ImageView 
+			style="@style/DefaultImageView"
+			android:tag="#SKIN:"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="left|center_vertical"
+            android:background="@drawable/et_ic_account"
+            android:contentDescription="@null" />
+           
+         <ImageView 
+			style="@style/DefaultImageView"
+			android:id="@+id/ivAccountDelete"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/et_ic_delete"
+            android:visibility="gone"
+            android:contentDescription="@null" />
+  	</FrameLayout>
+   
+    <Button 
+        style="@style/DefaultButton"
+        android:id="@+id/btnAdd"
+		android:tag="#SKIN:"
+       	android:layout_marginTop="12dp"
+       	android:layout_marginLeft="1dp"
+       	android:layout_marginRight="1dp"
+        android:textSize="18sp"
+        android:textColor="@color/txtBtnAdd"
+        android:text="@string/btn_add"
+       	android:background="@drawable/btn_yes" />
+</LinearLayout>

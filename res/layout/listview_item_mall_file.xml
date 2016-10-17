@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/DefaultWrapper"
+	android:id="@+id/llayoutWrapper"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    tools:context="${relativePackage}.${activityClass}">
+        
+    <TextView 
+        style="@style/DefaultTextView"
+        android:id="@+id/txtvIcon"
+		android:tag="#SKIN:"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:textColor="@color/white" />
+       
+    <Button 
+        style="@style/DefaultButton"
+        android:id="@+id/btnDownload"
+		android:tag="#SKIN:"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true" />
+       
+    <TextView 
+        style="@style/DefaultTextView"
+        android:id="@+id/txtvName"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@id/btnDownload"
+        android:layout_toRightOf="@id/txtvIcon"
+        android:layout_toLeftOf="@id/btnDownload"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp"
+        android:gravity="left|center_vertical"
+        android:ellipsize="end"
+        android:singleLine="true" />
+       
+    <TextView 
+        style="@style/DefaultTextView"
+        android:id="@+id/txtvDesc"
+        android:layout_below="@id/txtvName"
+        android:layout_toRightOf="@id/txtvIcon"
+        android:layout_alignBottom="@id/txtvIcon"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="3dp"
+        android:textSize="12sp"
+        android:textColor="@color/darkgray"
+        android:gravity="left|bottom"
+        android:ellipsize="end"
+        android:singleLine="true" />
+</RelativeLayout>

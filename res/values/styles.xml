@@ -1,0 +1,402 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Theme -->
+    
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/uActionBar</item><!-- 顶栏 -->
+        <item name="android:actionBarTabTextStyle">@style/uActionBarTabText</item><!-- 切换栏 -->
+    </style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+    </style>
+    
+    <style name="uActionBar" parent="android:Widget.Holo.Light.ActionBar"><!-- 顶栏样式 -->
+        <item name="android:background">@color/defaultActionBar</item><!-- 顶栏背景 -->
+        <item name="android:backgroundStacked">@color/defaultActionBarTab</item><!-- 切换栏背景 -->
+        <item name="android:titleTextStyle">@style/uActionBarTitleText</item><!-- 顶栏字体样式 -->
+    </style>
+
+    <style name="uActionBarTabText" parent="android:Widget.Holo.ActionBar.TabText">
+        <item name="android:textColor">@color/defaultActionBarTxt</item><!-- 切换栏字体颜色 -->
+    </style>
+
+    <style name="uActionBarTitleText" parent="android:TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/defaultActionBarTxt</item><!-- 字体颜色 -->
+    </style>
+    
+    <style name="uInitTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_activity_main</item><!-- 启动缓冲图 -->
+    </style>
+    
+    <style name="uDialog" parent="android:Theme.Holo.Light.DialogWhenLarge"><!-- 自定义的对话框样式 -->
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    
+    <style name="uDialogAnim" mce_bogus="1"><!-- 对话框的动画 -->
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+    
+    <!-- Style -->
+    
+    <style name="DefaultWrapper"><!-- 默认活动包装布局 -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">@dimen/wrapper_padding</item>
+    </style>
+    
+    <style name="DefaultImageView"><!-- 默认图片显示 -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+    
+    <style name="DefaultEditText"><!-- 默认输入框 -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:textSize">@dimen/default_textsize</item>
+        <item name="android:textColor">@color/defaultFontNormal</item>
+    </style>
+    
+    <style name="DefaultButton"><!-- 默认按钮 -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/default_textsize</item>
+        <item name="android:textColor">@color/defaultFontNormal</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+    
+    <style name="DefaultTextView"><!-- 默认文字显示 -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/default_textsize</item>
+        <item name="android:textColor">@color/defaultFontNormal</item>
+        <item name="android:gravity">center</item>
+    </style>
+    
+    <style name="DefaultListView"><!-- 默认列表显示 -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">6dp</item>
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:divider">@null</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+    </style>
+    
+    <style name="DefaultGridView"><!-- 默认网格显示 -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    
+    <style name="DefaultViewPager"><!-- 默认视图分页 -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    
+    <style name="DefaultHorProgressBar"><!-- 默认横加载中 -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">1dp</item>
+        <item name="android:maxHeight">1dp</item>
+        <item name="android:indeterminate">false</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/pb_progress_default</item>
+        <!-- <item name="android:mirrorForRtl">true</item> -->
+    </style>
+    
+    <style name="DefaultCircleProgressBar"><!-- 默认圆加载中 -->
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+    </style>
+    
+    <style name="DefaultTabWidget"><!-- 默认选项卡 -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    
+    <style name="DefaultSurfaceView"><!-- 默认绘图 -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    
+    <style name="DefaultLine"><!-- 默认分隔栏 -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/defaultLine</item>
+    </style>
+    
+    <style name="DefaultLayer"><!-- 默认突出显示 -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#DDEEEEEE</item>
+    </style>
+    
+    <style name="DefaultBrandView"><!-- 默认商标图 -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    
+    <style name="DefaultDescButton"><!-- 默认含描述按钮 -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    
+    <style name="DefaultClearEditText"><!-- 默认含清除输入框 -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/default_textsize</item>
+        <item name="android:textColor">@color/defaultFontNormal</item>
+    </style>
+    
+    <style name="DefaultLetterBarView"><!-- 默认字母列 -->
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    
+    <style name="DefaultRefreshableLinearLayout"><!-- 默认刷新布局 -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    
+    <style name="DefaultSlidingLinearLayout"><!-- 默认侧滑布局 -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    
+    <style name="DefaultTestUnit"><!-- 默认测试单元 -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/bg_prominent</item>
+    </style>
+    
+    <style name="ForHomeKindButton" parent="DefaultButton"><!-- 主页类型按钮 -->
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:textColor">@drawable/txt_default</item>
+        <item name="android:background">@drawable/btn_business_kind</item>
+        <item name="android:drawableRight">@drawable/ic_arrow_right</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+    
+    <style name="ForHomeItemLayout"><!-- 主页类别下单元素 -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingLeft">7dp</item>
+        <item name="android:paddingRight">7dp</item>
+        <item name="android:background">@drawable/btn_default</item>
+    </style>
+    
+    <style name="ForHomeItemImageView" parent="DefaultImageView"><!-- 主页类别下单元素图标 -->
+        <item name="android:layout_width">42dp</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+    
+    <style name="ForHomeItemTextView" parent="DefaultTextView"><!-- 主页类别下单元素文字 -->
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">6dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+    
+    <style name="ForDetailInfoTitleTextView" parent="DefaultTextView"><!-- 详细内容以按钮为主页面的表头名 -->
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:paddingLeft">14dp</item>
+        <item name="android:paddingRight">14dp</item>
+        <item name="android:textColor">@color/txtTxtvDetailInfo</item>
+        <item name="android:textSize">@dimen/txtv_detail_info_title</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+    
+    <style name="ForDetailInfoButton" parent="DefaultButton"><!-- 详细内容以按钮为主页面的按钮 -->
+        <item name="android:layout_height">42dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:textColor">@color/txtTxtvDetailInfo</item>
+        <item name="android:textSize">@dimen/txtv_detail_info_name</item>
+        <item name="android:background">@drawable/btn_default</item>
+        <item name="android:drawableRight">@drawable/ic_arrow_right</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+    
+    <style name="ForDetailInfoDescButton" parent="DefaultDescButton"><!-- 详细内容以按钮为主页面的含描述按钮 -->
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">14dp</item>
+        <item name="android:paddingRight">14dp</item>
+        <item name="android:background">@drawable/btn_default</item>
+        <item name="android:drawableRight">@drawable/ic_arrow_right</item>
+    </style>
+    
+    <style name="ForDetailInfoLine" parent="DefaultLine"><!-- 详细内容以按钮为主页面的分隔符 -->
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+    </style>
+    
+    <style name="ActInitBtn" parent="DefaultButton"><!-- 初始化页面按钮 -->
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textColor">@color/txtActInitBtn</item>
+        <item name="android:background">@drawable/btn_rect_yes</item>
+    </style>
+    
+    <style name="ActUserMainBarButton" parent="DefaultButton"><!-- 用户主页底栏的按钮 -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:textSize">@dimen/txtv_user_bar</item>
+        <item name="android:textColor">@drawable/txt_default</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="ActChatMsgTextView" parent="DefaultTextView"><!-- 聊天信息显示 -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:minHeight">44dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+    
+    <style name="ActChatIconImageView" parent="DefaultImageView"><!-- 聊天头像显示 -->
+        <item name="android:layout_width">@dimen/act_chat_icon</item>
+        <item name="android:layout_height">@dimen/act_chat_icon</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:background">@drawable/bg_border</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    
+    <style name="ActPasscodeEditText" parent="DefaultEditText"><!-- 应用锁单元输入 -->
+        <item name="android:layout_width">@dimen/act_passcode_editt</item>
+        <item name="android:layout_height">@dimen/act_passcode_editt</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@color/whitesmoke</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:inputType">numberPassword</item>
+        <item name="android:gravity">center</item>
+    </style>
+    
+    <style name="ActPasscodeButton" parent="DefaultButton"><!-- 应用锁单元按钮 -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/btn_default</item>
+        <item name="android:clickable">true</item>
+        <item name="android:onClick">onNumpadClick</item>
+        <item name="android:gravity">center</item>
+    </style>
+    
+    <style name="ActMallButton" parent="DefaultButton"><!-- 商城按钮 -->
+        <item name="android:layout_width">110dp</item>
+        <item name="android:layout_height">110dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    <style name="ActDownloadButton" parent="DefaultButton"><!-- 下载按钮 -->
+        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    <style name="ActQrscanHorizontal"><!-- 二维码扫描横向栏 -->
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_height">4dp</item>
+        <item name="android:background">@color/defaultTheme</item>
+    </style>
+    
+    <style name="ActQrscanVertical"><!-- 二维码扫描纵向栏 -->
+        <item name="android:layout_width">4dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:background">@color/defaultTheme</item>
+    </style>
+    
+    <style name="ActTestButton" parent="DefaultButton"><!-- 测试单元按钮 -->
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">@color/txtBtnTest</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    
+    <style name="FrgUserContactLine" parent="DefaultLine"><!-- 用户联系碎片分割线 -->
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+    
+    <style name="FrgUserContactItemLayout"><!-- 用户联系碎片元素 -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:background">@drawable/btn_default</item>
+    </style>
+    
+    <style name="FrgUserContactItemImageView" parent="DefaultImageView"><!-- 用户联系碎片元素图标 -->
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:background">@drawable/bg_border</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    
+    <style name="FrgUserContactItemTextView" parent="DefaultTextView"><!-- 用户联系碎片元素文字 -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/defaultFontOn</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+    
+    <style name="FrgUserAccountButton" parent="DefaultButton"><!-- 用户页面碎片按钮 -->
+        <item name="android:layout_height">42dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:background">@drawable/btn_default</item>
+        <item name="android:drawableRight">@drawable/ic_arrow_right</item>
+        <item name="android:drawablePadding">@dimen/default_drawable_padding</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+    
+    <style name="FrgUserAccountLine" parent="DefaultLine"><!-- 设置界面的分隔符 -->
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+    </style>
+    
+    <style name="DiaIfButton" parent="DefaultButton"><!-- 弹出框按钮 -->
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+</resources>

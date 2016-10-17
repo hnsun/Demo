@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/layoutWrapper"
+	android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}">
+    
+    <TextView 
+        style="@style/DefaultTextView"
+		android:layout_marginTop="10dp"
+		android:textSize="20sp"
+		android:text="@string/title_user_info_qrcode"
+		android:gravity="center" />
+           
+	<ImageView 
+		style="@style/DefaultImageView"
+		android:id="@+id/ivQrCode"
+		android:padding="10dp"
+		android:gravity="center"
+        android:contentDescription="@null" />
+    
+    <TextView 
+        style="@style/DefaultTextView"
+		android:padding="10dp"
+		android:gravity="center" />
+</LinearLayout>

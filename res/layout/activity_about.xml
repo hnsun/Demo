@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/layoutWrapper"
+    tools:context="${relativePackage}.${activityClass}">
+    
+    <TextView 
+        style="@style/DefaultTextView"
+        android:id="@+id/txtvCopyright"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:text="@string/app_copyright" />
+    
+    <LinearLayout 
+        android:id="@+id/llBrand"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/txtvCopyright"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:gravity="center">
+            
+        <ImageView 
+			style="@style/DefaultImageView"
+            android:contentDescription="@null"
+            android:background="@drawable/ic_brand" />
+
+	    <com.hnsun.myaccount.view.BrandView
+	        style="@style/DefaultBrandView"
+	        auto:mainColor="@color/green"
+	        auto:descColor="@color/black"
+	        auto:mainSize="50sp"
+	        auto:descSize="20sp" />
+    
+	    <TextView 
+        	style="@style/DefaultTextView"
+	        android:id="@+id/txtvAbout"
+	        android:layout_marginTop="30dp"
+	        android:text="@string/app_about" />
+    </LinearLayout>
+</RelativeLayout>

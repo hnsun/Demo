@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+    android:layout_height="55dp"
+    android:padding="15dp"
+    android:background="@color/bgDownloadCusLayout"
+    tools:context="${relativePackage}.${activityClass}">
+
+    <TextView
+        style="@style/DefaultTextView"
+        android:id="@+id/txtvDesc"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/txt_refreshable_refresh_pull" />
+
+    <TextView
+        style="@style/DefaultTextView"
+        android:id="@+id/txtvUpdatedAt"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/txtvDesc"
+        android:textSize="12sp"
+        android:text="@string/txt_refreshable_updated_at" />
+    
+	<ImageView 
+	    style="@style/DefaultImageView"
+	    android:id="@+id/ivArrow"
+	    android:layout_centerVertical="true"
+	    android:layout_toLeftOf="@id/txtvDesc"
+	    android:layout_marginRight="25dp"
+	    android:src="@drawable/ic_arrow_down"
+	    android:contentDescription="@null" />
+	
+	<ProgressBar 
+	    style="@style/DefaultCircleProgressBar"
+	    android:id="@+id/pbLoading"
+	    android:layout_centerVertical="true"
+	    android:layout_toLeftOf="@id/txtvDesc"
+	    android:layout_marginRight="25dp"
+	    android:visibility="gone" />
+
+</RelativeLayout>

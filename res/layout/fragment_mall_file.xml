@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/flayoutWrapper"
+	android:padding="0dp"
+    tools:context="${relativePackage}.${activityClass}">
+    
+    <RelativeLayout 
+        android:id="@+id/rlBar"
+		android:tag="#SKIN:"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:background="#CED9CA">
+            
+	    <Button 
+			style="@style/DefaultButton"
+			android:id="@+id/btnMenu"
+			android:layout_width="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:textColor="@drawable/txt_default"
+			android:text="@string/txt_navigation"
+	        android:background="@color/transparent"
+	        android:drawablePadding="5dp"
+	        android:drawableLeft="@drawable/ic_menu"
+	        android:drawableRight="@drawable/ic_arrow_right_carrot" />
+	    
+	    <TextView 
+	        style="@style/DefaultTextView"
+	        android:id="@+id/txtvPosition"
+	        android:layout_width="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_toRightOf="@id/btnMenu"
+	        android:paddingLeft="5dp"
+	        android:textSize="14sp" />
+    
+	    <Button 
+	        style="@style/DefaultButton"
+	        android:id="@+id/btnZone"
+			android:tag="#SKIN:"
+	        android:layout_width="wrap_content"
+			android:layout_height="26dp"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:textSize="12sp"
+	        android:textColor="@color/white"
+	        android:text="@string/btn_download_zone"
+	        android:background="@drawable/btn_yes" />
+    </RelativeLayout>
+    
+    <ListView 
+        style="@style/DefaultListView"
+        android:id="@+id/lvContent"
+        android:layout_below="@id/rlBar"
+        android:padding="0dp"
+        android:divider="@color/lightgray"
+        android:dividerHeight="1px" />
+</RelativeLayout>

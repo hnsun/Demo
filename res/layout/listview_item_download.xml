@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/DefaultWrapper"
+	android:id="@+id/llayoutWrapper"
+    android:layout_height="wrap_content"
+    android:padding="0dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}">
+        
+    <RelativeLayout 
+        android:id="@+id/rlContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_incolor"
+        android:padding="10dp">
+        
+        <ImageView 
+            style="@style/DefaultImageView"
+	        android:id="@+id/ivIcon"
+	        android:layout_width="49dp"
+	        android:layout_height="49dp"
+	        android:scaleType="fitXY"
+            android:contentDescription="@null" />
+        
+	    <TextView 
+	        style="@style/DefaultTextView"
+	        android:id="@+id/txtvName"
+	        android:layout_width="wrap_content"
+	        android:layout_alignTop="@id/ivIcon"
+	        android:layout_toRightOf="@id/ivIcon"
+	        android:layout_marginTop="5dp"
+	        android:layout_marginLeft="10dp"
+	        android:textSize="18sp"
+	        android:gravity="left|center_vertical"
+	        android:ellipsize="end"
+	        android:singleLine="true" />
+        
+	    <TextView 
+	        style="@style/DefaultTextView"
+	        android:id="@+id/txtvSize"
+	        android:layout_width="wrap_content"
+	        android:layout_below="@id/txtvName"
+	        android:layout_toRightOf="@id/ivIcon"
+	        android:layout_marginTop="3dp"
+	        android:layout_marginLeft="10dp"
+	        android:textSize="13sp"
+	        android:gravity="left|center_vertical" />
+        
+	    <TextView 
+	        style="@style/DefaultTextView"
+	        android:id="@+id/txtvProgress"
+	        android:layout_width="wrap_content"
+	        android:layout_below="@id/txtvName"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginTop="3dp"
+	        android:layout_marginRight="15dp"
+	        android:textSize="13sp"
+	        android:gravity="right|center_vertical" />
+        
+	    <TextView 
+	        style="@style/DefaultTextView"
+	        android:id="@+id/txtvState"
+			android:tag="#SKIN:"
+	        android:layout_width="wrap_content"
+	        android:layout_below="@id/txtvName"
+	        android:layout_toLeftOf="@id/txtvProgress"
+	        android:layout_marginTop="3dp"
+	        android:layout_marginRight="10dp"
+	        android:textSize="13sp"
+	        android:textColor="@color/defaultFontOn"
+	        android:gravity="right|center_vertical" />
+    </RelativeLayout>
+
+    <ProgressBar
+        style="@style/DefaultHorProgressBar"
+        android:id="@+id/pbIng"
+		android:tag="#SKIN:" />
+    
+    <LinearLayout 
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone">
+	        
+        <Button 
+	        style="@style/ActDownloadButton"
+	        android:id="@+id/btnDelete"
+			android:tag="#SKIN:"
+	        android:text="@string/btn_delete"
+	        android:background="@drawable/btn_rect_not" />
+        
+        <Button 
+	        style="@style/ActDownloadButton"
+	        android:id="@+id/btnState"
+			android:tag="#SKIN:"
+			android:text="@string/btn_download"
+	        android:background="@drawable/btn_rect_yes" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="DescButton">
+        <attr name="nameText" format="reference|string" />
+        <attr name="infoText" format="reference|string" />
+        <attr name="nameColor" format="reference|color" />
+        <attr name="infoColor" format="reference|color" />
+        <attr name="nameSize" format="reference|dimension" />
+        <attr name="infoSize" format="reference|dimension" />
+        <attr name="normalColor" format="reference|color" />
+        <attr name="onColor" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="BrandView">
+        <attr name="mainText" format="reference|string" />
+        <attr name="descText" format="reference|string" />
+        <attr name="mainColor" format="reference|color" />
+        <attr name="descColor" format="reference|color" />
+        <attr name="mainSize" format="reference|dimension" />
+        <attr name="descSize" format="reference|dimension" />
+    </declare-styleable>
+    
+      <declare-styleable name="ColonTextView">
+          <attr name="text" format="reference|string" />
+      </declare-styleable>
+
+</resources>

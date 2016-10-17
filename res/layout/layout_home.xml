@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:layout_height="wrap_content"
+	android:padding="0dp"
+	android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}">
+	    
+    <FrameLayout 
+        android:id="@+id/flContent"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+        
+	    <android.support.v4.view.ViewPager
+	        style="@style/DefaultViewPager"
+	        android:id="@+id/vpBanner" />
+    </FrameLayout>
+    
+    <TextView 
+        style="@style/DefaultTextView" 
+        android:id="@+id/txtvNotification"
+		android:tag="#SKIN:"
+        android:layout_height="30dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:text="@string/app_copyright"
+        android:background="@color/bgTxtvNotification"
+        android:drawableLeft="@drawable/ic_notification"
+        android:drawablePadding="10dp"
+        android:gravity="left|center_vertical" />
+    
+    <Button 
+        style="@style/ForHomeKindButton" 
+        android:id="@+id/btnKindService"
+		android:tag="#SKIN:"
+        android:text="@string/txt_service_kind" />
+		    
+    <RelativeLayout 
+        style="@style/ForHomeItemLayout"
+        android:id="@+id/rlService1">
+        
+        <ImageView 
+            style="@style/ForHomeItemImageView"
+            android:id="@+id/ivService1"
+            android:src="@drawable/ic_service_1"
+            android:contentDescription="@null" />
+        
+        <TextView 
+            style="@style/ForHomeItemTextView"
+			android:layout_toRightOf="@id/ivService1"
+        	android:text="@string/app_service_desc_1" />
+    </RelativeLayout>
+        
+    <View style="@style/DefaultLine" />
+		    
+    <RelativeLayout 
+        style="@style/ForHomeItemLayout"
+        android:id="@+id/rlService2">
+        
+        <ImageView 
+            style="@style/ForHomeItemImageView"
+            android:id="@+id/ivService2"
+            android:src="@drawable/ic_service_2"
+            android:contentDescription="@null" />
+        
+        <TextView 
+            style="@style/ForHomeItemTextView"
+			android:layout_toRightOf="@id/ivService2"
+        	android:text="@string/app_service_desc_2" />
+    </RelativeLayout>
+        
+    <View style="@style/DefaultLine" />
+		    
+    <RelativeLayout 
+        style="@style/ForHomeItemLayout"
+        android:id="@+id/rlService3">
+        
+        <ImageView 
+            style="@style/ForHomeItemImageView"
+            android:id="@+id/ivService3"
+            android:src="@drawable/ic_service_3"
+            android:contentDescription="@null" />
+        
+        <TextView 
+            style="@style/ForHomeItemTextView"
+			android:layout_toRightOf="@id/ivService3"
+        	android:text="@string/app_service_desc_3" />
+    </RelativeLayout>
+        
+    <View style="@style/DefaultLine" />
+    
+    <Button 
+        style="@style/ForHomeKindButton" 
+        android:id="@+id/btnNews"
+		android:tag="#SKIN:"
+        android:text="@string/txt_news" />
+    
+    <FrameLayout 
+        android:id="@+id/flNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="180dp">
+    </FrameLayout>
+        
+    <View style="@style/DefaultLine" />
+</LinearLayout>
+

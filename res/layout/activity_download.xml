@@ -1,0 +1,20 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/layoutWrapper"
+	android:padding="0dp"
+	android:background="@color/bgDownload"
+    tools:context="${relativePackage}.${activityClass}">
+    
+    <com.hnsun.myaccount.view.RefreshableLinearLayout 
+        style="@style/DefaultRefreshableLinearLayout"
+        android:id="@+id/rllContent">
+        
+	    <ListView 
+	        style="@style/DefaultListView"
+	        android:id="@+id/lvContent"
+	        android:padding="0dp"
+            android:scrollbars="none" />
+    </com.hnsun.myaccount.view.RefreshableLinearLayout>
+</RelativeLayout>

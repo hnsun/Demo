@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- 默认 -->
+	<color name="defaultTheme">#7EAB52</color>
+	<color name="defaultFontNormal">#222222</color>
+	<color name="defaultFontOn">#009900</color>
+	<color name="defaultFontDown">#E4E4EE</color>
+	<color name="defaultActionBar">#7EAB52</color>
+	<color name="defaultActionBarTab">#669933</color>
+	<color name="defaultActionBarTxt">#FFFFFF</color>
+	<color name="defaultDialog">#DDDDDD</color>
+	<color name="defaultLine">#E4E4E4</color>
+	<color name="defaultNot">#888888</color>
+    
+	<!-- 背景 -->
+	<!-- 具体活动指定颜色 -->
+	<color name="bgInfo">#7EAB52</color>
+	<color name="bgSetting">#E4E4E4</color>
+	<color name="bgDownload">#E4E4E4</color>
+	<color name="bgMainBrand">#55FFFFFF</color>
+	<color name="bgInitBrand">#55FFFFFF</color>
+	<color name="bgZone">#E4E4E4</color>
+	<color name="bgChatTxtvTime">#55999999</color>
+	<color name="bgTourist">#FFFFFF</color>
+	<color name="bgUserHome">#FFFFFF</color>
+	<color name="bgUserContact">#E4E4E4</color>
+	<color name="bgUserAccount">#E4E4E4</color>
+	<color name="bgMall">#CED9CA</color>
+	<color name="bgNavigation">#999966</color>
+	<color name="bgDownloadCusLayout">#E9ECE9</color>
+	<!-- 具体组件指定颜色 -->
+	<color name="bgTxtvNotification">#AECE97</color>
+	<color name="bgBtnKind">#E9ECE9</color>
+	
+	<!-- 字体 -->
+	<!-- 具体活动指定颜色 -->
+	<color name="txtActInitBtn">#FFFFFF</color>
+	<color name="txtActUserContactDialog">#FFFFFF</color>
+	<color name="txtActUserContactBtnAdd">#FFFFFF</color>
+	<!-- 具体组件指定颜色 -->
+	<color name="txtTxtvDetailInfo">#222222</color>
+	<color name="txtTxtvDetailInfoDesc">#646464</color>
+	<color name="txtBtnLogin">#FFFFFF</color>
+	<color name="txtBtnRegister">#FFFFFF</color>
+	<color name="txtBtnExit">#FFFFFF</color>
+	<color name="txtBtnAdd">#FFFFFF</color>
+	<color name="txtBtnSendOn">#222222</color>
+	<color name="txtBtnSendNot">#77999999</color>
+	<color name="txtBtnTest">#333333</color>
+
+</resources>

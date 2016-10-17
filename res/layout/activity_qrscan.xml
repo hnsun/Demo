@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/layoutWrapper"
+	android:padding="0dp"
+    tools:context="${relativePackage}.${activityClass}">
+    
+    <SurfaceView
+		style="@style/DefaultSurfaceView"
+        android:id="@+id/svContent" />
+    
+	<TextView
+		style="@style/DefaultTextView"
+		android:id="@+id/txtvCaution"
+	    android:layout_height="100dp"
+	    android:layout_alignParentTop="true"
+	    android:paddingBottom="20dp"
+	    android:text="@string/msg_qrscan"
+	    android:textColor="@color/white"
+	    android:background="#80000000"
+	    android:gravity="bottom|center_horizontal" />
+    
+	<Button
+		style="@style/DefaultButton"
+		android:id="@+id/btnQrcode"
+	    android:layout_width="wrap_content"
+	    android:layout_centerHorizontal="true"
+	    android:layout_alignParentBottom="true"
+	    android:layout_marginBottom="10dp"
+	    android:text="@string/btn_me_qrscan"
+	    android:textColor="@drawable/txt_incolor" />
+	
+	<RelativeLayout 
+	    android:id="@+id/rlContent"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/txtvCaution"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="5dp"
+	    android:layout_marginLeft="50dp"
+	    android:layout_marginRight="50dp"
+	    android:background="@drawable/bg_border_qrscan">
+	    
+	    <View style="@style/ActQrscanHorizontal" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+	    <View style="@style/ActQrscanHorizontal" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+	    <View style="@style/ActQrscanHorizontal" android:layout_alignParentRight="true" android:layout_alignParentTop="true" />
+	    <View style="@style/ActQrscanHorizontal" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+	    <View style="@style/ActQrscanVertical" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+	    <View style="@style/ActQrscanVertical" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+	    <View style="@style/ActQrscanVertical" android:layout_alignParentRight="true" android:layout_alignParentTop="true" />
+	    <View style="@style/ActQrscanVertical" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+	    
+	    <com.hnsun.myaccount.view.ScanLineView
+	        android:id="@+id/slvLine"
+	        android:layout_width="match_parent"
+	        android:layout_height="15dp" />
+	</RelativeLayout>
+</RelativeLayout>

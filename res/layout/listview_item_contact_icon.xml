@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/DefaultWrapper"
+	android:id="@+id/llayoutWrapper"
+    android:layout_height="wrap_content"
+    android:padding="0dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}">
+        
+    <TextView 
+        style="@style/DefaultTextView"
+        android:id="@+id/txtvCatalog"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="14sp"
+        android:gravity="center_vertical|left"
+        android:visibility="gone" />
+        
+    <RelativeLayout 
+        style="@style/FrgUserContactItemLayout"
+        android:id="@+id/rlContent">
+        
+        <ImageView 
+            style="@style/FrgUserContactItemImageView"
+	        android:id="@+id/ivIcon"
+            android:contentDescription="@null" />
+        
+	    <TextView 
+	        style="@style/FrgUserContactItemTextView"
+	        android:id="@+id/txtvContent"
+	        android:layout_toRightOf="@id/ivIcon"
+	        android:textColor="@color/defaultFontNormal" />
+    </RelativeLayout>
+    
+    <View style="@style/FrgUserContactLine" />
+</LinearLayout>

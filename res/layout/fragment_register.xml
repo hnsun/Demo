@@ -1,0 +1,175 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/flayoutWrapper"
+    tools:context="${relativePackage}.${activityClass}">
+    
+    <LinearLayout 
+        android:id="@+id/llRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:orientation="vertical">
+        
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        	android:layout_marginTop="15dp">
+            
+            <EditText 
+				style="@style/DefaultEditText"
+                android:id="@+id/etAccount"
+	            android:paddingLeft="@dimen/et_icon_padding_left"
+	            android:paddingRight="@dimen/et_icon_padding_right"
+	            android:hint="@string/tip_account" />
+            
+            <ImageView 
+				style="@style/DefaultImageView"
+				android:tag="#SKIN:"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left|center_vertical"
+                android:background="@drawable/et_ic_account"
+                android:contentDescription="@null" />
+            
+            <ImageView 
+				style="@style/DefaultImageView"
+				android:id="@+id/ivAccountDelete"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/et_ic_delete"
+                android:visibility="gone"
+                android:contentDescription="@null" />
+        </FrameLayout>
+        
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        	android:layout_marginTop="6dp">
+            
+            <EditText 
+				style="@style/DefaultEditText"
+                android:id="@+id/etPassword"
+	            android:paddingLeft="@dimen/et_icon_padding_left"
+	            android:paddingRight="@dimen/et_icon_padding_right"
+	            android:inputType="textPassword"
+	            android:hint="@string/tip_password" />
+            
+            <ImageView 
+				style="@style/DefaultImageView"
+				android:tag="#SKIN:"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left|center_vertical"
+                android:background="@drawable/et_ic_password"
+                android:contentDescription="@null" />
+            
+            <ImageView 
+				style="@style/DefaultImageView"
+				android:id="@+id/ivPasswordDelete"
+                android:layout_marginRight="32dp"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/et_ic_delete"
+                android:visibility="gone"
+                android:contentDescription="@null" />
+            
+            <ImageView 
+				style="@style/DefaultImageView"
+				android:id="@+id/ivPasswordEye"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/et_ic_eye_normal"
+                android:contentDescription="@null" />
+        </FrameLayout>
+    
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        	android:layout_marginTop="6dp">
+            
+            <EditText 
+				style="@style/DefaultEditText"
+                android:id="@+id/etPasswordAgain"
+	            android:paddingLeft="@dimen/et_icon_padding_left"
+	            android:paddingRight="@dimen/et_icon_padding_right"
+	            android:inputType="textPassword"
+	            android:hint="@string/tip_password_again" />
+            
+            <ImageView 
+				style="@style/DefaultImageView"
+				android:tag="#SKIN:"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left|center_vertical"
+                android:background="@drawable/et_ic_password"
+                android:contentDescription="@null" />
+            
+            <ImageView 
+				style="@style/DefaultImageView"
+				android:id="@+id/ivPasswordAgainDelete"
+                android:layout_marginRight="32dp"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/et_ic_delete"
+                android:visibility="gone"
+                android:contentDescription="@null" />
+            
+            <ImageView 
+				style="@style/DefaultImageView"
+				android:id="@+id/ivPasswordAgainEye"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/et_ic_eye_normal"
+                android:contentDescription="@null" />
+        </FrameLayout>
+        
+	    <Button 
+	        style="@style/DefaultButton"
+	        android:id="@+id/btnRegister"
+			android:tag="#SKIN:"
+        	android:layout_marginTop="12dp"
+        	android:layout_marginLeft="1dp"
+        	android:layout_marginRight="1dp"
+            android:padding="5dp"
+	        android:textSize="18sp"
+	        android:textColor="@color/txtBtnRegister"
+	        android:text="@string/btn_register"
+        	android:background="@drawable/btn_yes" />
+    </LinearLayout>
+    
+    <Button 
+		style="@style/DefaultButton"
+        android:id="@+id/btnForgetPassword"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/llRegister"
+        android:layout_alignLeft="@id/llRegister"
+        android:text="@string/btn_forget_password"
+        android:gravity="left|center_vertical" />
+    
+    <Button 
+		style="@style/DefaultButton"
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/llRegister"
+        android:layout_alignRight="@id/llRegister"
+        android:text="@string/btn_login"
+        android:gravity="right|center_vertical" />
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/btnLogin"
+        android:orientation="vertical"
+        android:gravity="center">
+            
+        <ImageView 
+			style="@style/DefaultImageView"
+            android:background="@drawable/ic_brand"
+            android:contentDescription="@null" />
+
+	    <com.hnsun.myaccount.view.BrandView 
+	        style="@style/DefaultBrandView"
+	        auto:mainColor="@color/green"
+	        auto:descColor="@color/black"
+	        auto:mainSize="50sp"
+	        auto:descSize="20sp" />
+    </LinearLayout>
+</RelativeLayout>

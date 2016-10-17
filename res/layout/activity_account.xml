@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/layoutWrapper"
+    tools:context="${relativePackage}.${activityClass}">
+    
+    <LinearLayout 
+        android:id="@+id/llLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:orientation="vertical">
+        
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        	android:layout_marginTop="25dp">
+            
+            <EditText 
+				style="@style/DefaultEditText"
+                android:id="@+id/etAccount"
+	            android:paddingLeft="@dimen/et_icon_padding_left"
+	            android:paddingRight="@dimen/et_icon_padding_right"
+	            android:hint="@string/tip_account" />
+            
+            <ImageView 
+				style="@style/DefaultImageView"
+				android:id="@+id/ivAccount"
+				android:tag="#SKIN:"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left|center_vertical"
+                android:background="@drawable/et_ic_account"
+                android:contentDescription="@null" />
+            
+            <ImageView 
+				style="@style/DefaultImageView"
+				android:id="@+id/ivAccountDelete"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/et_ic_delete"
+                android:visibility="gone"
+                android:contentDescription="@null" />
+        </FrameLayout>
+        
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        	android:layout_marginTop="6dp">
+            
+            <EditText 
+				style="@style/DefaultEditText"
+                android:id="@+id/etPassword"
+	            android:paddingLeft="@dimen/et_icon_padding_left"
+	            android:paddingRight="@dimen/et_icon_padding_right"
+	            android:inputType="textPassword"
+	            android:hint="@string/tip_password" />
+            
+            <ImageView 
+				style="@style/DefaultImageView"
+				android:id="@+id/ivPassword"
+				android:tag="#SKIN:"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left|center_vertical"
+                android:background="@drawable/et_ic_password"
+                android:contentDescription="@null" />
+            
+            <ImageView 
+				style="@style/DefaultImageView"
+				android:id="@+id/ivPasswordDelete"
+                android:layout_marginRight="32dp"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/et_ic_delete"
+                android:visibility="gone"
+                android:contentDescription="@null" />
+            
+            <ImageView 
+				style="@style/DefaultImageView"
+				android:id="@+id/ivPasswordEye"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/et_ic_eye_normal"
+                android:contentDescription="@null" />
+        </FrameLayout>
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/llButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+       	android:layout_marginRight="1dp"
+       	android:layout_marginLeft="1dp"
+        android:layout_below="@id/llLogin"
+        android:layout_alignLeft="@id/llLogin"
+        android:layout_alignRight="@id/llLogin"
+        android:orientation="horizontal">
+    
+	    <Button 
+	        style="@style/DefaultButton"
+	        android:id="@+id/btnLogin"
+			android:tag="#SKIN:"
+        	android:layout_marginRight="2dp"
+        	android:layout_weight="1"
+            android:padding="5dp"
+	        android:textSize="18sp"
+	        android:textColor="@color/txtBtnLogin"
+	        android:text="@string/btn_login"
+        	android:background="@drawable/btn_yes" />
+    
+	    <Button 
+	        style="@style/DefaultButton"
+	        android:id="@+id/btnExit"
+			android:tag="#SKIN:"
+        	android:layout_marginLeft="2dp"
+        	android:layout_weight="1"
+            android:padding="5dp"
+	        android:textSize="18sp"
+	        android:textColor="@color/txtBtnExit"
+	        android:text="@string/btn_exit"
+        	android:background="@drawable/btn_not" />
+    </LinearLayout>
+</RelativeLayout>

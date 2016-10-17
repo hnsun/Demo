@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/flayoutWrapper"
+	android:padding="0dp"
+	android:background="@color/bgUserAccount"
+	android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}">
+    
+    <RelativeLayout
+        android:id="@+id/rlUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/btn_default">
+        
+        <ImageView 
+            style="@style/DefaultImageView"
+            android:id="@+id/ivIcon" 
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_border"
+            android:scaleType="fitXY"
+            android:contentDescription="@null" />
+        
+        <TextView 
+            style="@style/DefaultTextView"
+            android:id="@+id/txtvName"
+			android:tag="#SKIN:"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/ivIcon"
+            android:layout_alignTop="@id/ivIcon"
+            android:padding="5dp"
+            android:textSize="18sp"
+            android:textColor="@color/defaultFontOn"
+        	android:background="@drawable/btn_default"
+            android:gravity="left|center_vertical" />
+        
+        <TextView 
+            style="@style/DefaultTextView"
+            android:id="@+id/txtvDesc"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/ivIcon"
+            android:layout_below="@id/txtvName"
+            android:padding="5dp"
+            android:textSize="13sp"
+        	android:background="@drawable/btn_default"
+            android:gravity="left|center_vertical" />
+        
+        <ImageView 
+            style="@style/DefaultImageView"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ic_arrow_right"
+        	android:background="@drawable/btn_default"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+        
+        <Button 
+            style="@style/FrgUserAccountButton"
+            android:id="@+id/btnAlbum"
+            android:text="@string/btn_album"
+            android:drawableLeft="@drawable/ic_album" />
+        
+        <View style="@style/FrgUserAccountLine" />
+        
+        <Button 
+            style="@style/FrgUserAccountButton"
+            android:id="@+id/btnAccountBook"
+            android:text="@string/btn_accountbook"
+            android:drawableLeft="@drawable/ic_accountbook" />
+        
+        <View style="@style/FrgUserAccountLine" />
+        
+        <Button 
+            style="@style/FrgUserAccountButton"
+            android:id="@+id/btnCollection"
+            android:text="@string/btn_collection"
+            android:drawableLeft="@drawable/ic_collection" />
+        
+        <View style="@style/FrgUserAccountLine" />
+        
+        <Button 
+            style="@style/FrgUserAccountButton"
+            android:id="@+id/btnZone"
+            android:text="@string/btn_zone"
+            android:drawableLeft="@drawable/ic_zone" />
+    </LinearLayout>
+        
+    <Button 
+        style="@style/FrgUserAccountButton"
+        android:id="@+id/btnSetting"
+        android:layout_marginTop="20dp"
+        android:text="@string/btn_setting"
+        android:drawableLeft="@drawable/ic_setting" />
+        
+    <Button 
+        style="@style/DefaultButton"
+        android:id="@+id/btnLogout"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/btn_logout"
+        android:background="@drawable/btn_default" />
+</LinearLayout>

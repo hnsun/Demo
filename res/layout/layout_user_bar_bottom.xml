@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:layout_height="wrap_content"
+	android:layout_alignParentBottom="true"
+	android:padding="0dp"
+    tools:context="${relativePackage}.${activityClass}">
+    
+    <View 
+        style="@style/DefaultLine"
+        android:id="@+id/vLine"
+        android:background="@color/grey" />
+    
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/vLine"
+		android:orientation="horizontal">
+	
+	    <Button 
+	        style="@style/ActUserMainBarButton"
+	        android:id="@+id/btnBarHome"
+	        android:drawableTop="@drawable/ic_bar_home"
+	        android:text="@string/btn_home" />
+	
+	    <Button 
+	        style="@style/ActUserMainBarButton"
+	        android:id="@+id/btnBarContact"
+	        android:drawableTop="@drawable/ic_bar_contact"
+	        android:text="@string/btn_contact" />
+	
+	    <Button 
+	        style="@style/ActUserMainBarButton"
+	        android:id="@+id/btnBarMessage"
+	        android:drawableTop="@drawable/ic_bar_message"
+	        android:text="@string/btn_message" />
+	
+	    <Button 
+	        style="@style/ActUserMainBarButton"
+	        android:id="@+id/btnBarAccount"
+	        android:drawableTop="@drawable/ic_bar_account"
+	        android:text="@string/btn_account" />
+	    <!-- android:background="#33A3CD22" -->
+	</LinearLayout>
+</RelativeLayout>
+

@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/DefaultWrapper"
+    android:id="@+id/layoutWrapper"
+    android:tag="#SKIN:"
+    android:background="@drawable/bg_activity_main"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <com.hnsun.myaccount.view.BrandView
+        style="@style/DefaultBrandView"
+        android:id="@+id/brandView"
+        android:layout_centerInParent="true"
+        android:background="@color/bgMainBrand"
+        auto:descColor="@color/black"
+        auto:mainColor="@color/green"
+        auto:descSize="23sp"
+        auto:mainSize="60sp" />
+
+    <ProgressBar
+        style="@style/DefaultCircleProgressBar"
+        android:layout_below="@id/brandView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        style="@style/DefaultTextView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="@string/app_copyright" />
+</RelativeLayout>

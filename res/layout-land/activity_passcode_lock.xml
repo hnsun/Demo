@@ -1,0 +1,145 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/layoutWrapper"
+	android:padding="0dp"
+	android:orientation="horizontal"
+	android:background="@color/defaultTheme"
+	android:baselineAligned="false"
+    tools:context="${relativePackage}.${activityClass}">
+
+    <LinearLayout 
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:gravity="center">
+	
+	    <com.hnsun.myaccount.view.BrandView
+	        style="@style/DefaultBrandView"
+	        android:layout_marginBottom="15dp"
+	        android:background="@color/bgInitBrand"
+	        auto:mainColor="@color/green"
+	        auto:descColor="@color/black"
+	        auto:mainSize="48sp"
+	        auto:descSize="18sp" />
+	    
+	    <TextView 
+        	style="@style/DefaultTextView"
+	        android:id="@+id/txtvTitle"
+	        android:layout_marginTop="15dp"
+	        android:textColor="@color/white"
+	        android:textSize="20sp"
+	        android:text="@string/title_passcode_input" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
+	
+	    <TableLayout 
+	        android:id="@+id/llBtns"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:padding="16dp"
+	        android:shrinkColumns="*"
+	        android:stretchColumns="*">
+	        
+	        <TableRow>
+	            <Button 
+	                style="@style/ActPasscodeButton"
+	                android:id="@+id/btn1"
+	                android:text="@string/pronoun_numpad_1" />
+	            
+	            <Button 
+	                style="@style/ActPasscodeButton"
+	                android:id="@+id/btn2"
+	                android:text="@string/pronoun_numpad_2" />
+	            
+	            <Button 
+	                style="@style/ActPasscodeButton"
+	                android:id="@+id/btn3"
+	                android:text="@string/pronoun_numpad_3" />
+	        </TableRow>
+	        
+	        <TableRow>
+	            <Button 
+	                style="@style/ActPasscodeButton"
+	                android:id="@+id/btn4"
+	                android:text="@string/pronoun_numpad_4" />
+	            
+	            <Button 
+	                style="@style/ActPasscodeButton"
+	                android:id="@+id/btn5"
+	                android:text="@string/pronoun_numpad_5" />
+	            
+	            <Button 
+	                style="@style/ActPasscodeButton"
+	                android:id="@+id/btn6"
+	                android:text="@string/pronoun_numpad_6" />
+	        </TableRow>
+	        
+	        <TableRow>
+	            <Button 
+	                style="@style/ActPasscodeButton"
+	                android:id="@+id/btn7"
+	                android:text="@string/pronoun_numpad_7" />
+	            
+	            <Button 
+	                style="@style/ActPasscodeButton"
+	                android:id="@+id/btn8"
+	                android:text="@string/pronoun_numpad_8" />
+	            
+	            <Button 
+	                style="@style/ActPasscodeButton"
+	                android:id="@+id/btn9"
+	                android:text="@string/pronoun_numpad_9" />
+	        </TableRow>
+	        
+	        <TableRow>
+	            <Button 
+	                style="@style/ActPasscodeButton"
+	                android:id="@+id/btnHelp"
+	                android:text="@string/btn_help"
+	                android:onClick="@null" />
+	            
+	            <Button 
+	                style="@style/ActPasscodeButton"
+	                android:id="@+id/btn0"
+	                android:text="@string/pronoun_numpad_0" />
+	            
+	            <Button 
+	                style="@style/ActPasscodeButton"
+	                android:id="@+id/btnBackspace"
+	                android:text="@string/btn_backspace"
+	                android:onClick="@null" />
+	        </TableRow>
+	    </TableLayout>
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@id/llBtns"
+	        android:gravity="center" >
+	
+	        <EditText
+	            style="@style/ActPasscodeEditText"
+	            android:id="@+id/etCode1" />
+	
+	        <EditText
+	            style="@style/ActPasscodeEditText"
+	            android:id="@+id/etCode2" />
+	
+	        <EditText
+	            style="@style/ActPasscodeEditText"
+	            android:id="@+id/etCode3" />
+	
+	        <EditText
+	            style="@style/ActPasscodeEditText"
+	            android:id="@+id/etCode4" />
+	    </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

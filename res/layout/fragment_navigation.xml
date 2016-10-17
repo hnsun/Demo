@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/flayoutWrapper"
+	android:tag="#SKIN:"
+	android:padding="0dp"
+	android:background="@color/bgNavigation"
+    tools:context="${relativePackage}.${activityClass}">
+    
+    <TextView 
+        style="@style/DefaultTextView"
+        android:id="@+id/txtvTitle"
+		android:tag="#SKIN:"
+        android:layout_alignParentTop="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:text="@string/txt_navigation" />
+    
+    <Button 
+        style="@style/DefaultButton"
+        android:id="@+id/btnZone"
+		android:tag="#SKIN:"
+        android:layout_alignParentBottom="true"
+        android:textColor="@drawable/txt_incolor" />
+    
+    <ListView 
+        style="@style/DefaultListView"
+        android:id="@+id/lvContent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="0dp" />
+	<!-- android:layout_below="@id/txtvTitle" -->
+</RelativeLayout>

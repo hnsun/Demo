@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/layoutWrapper"
+	android:padding="0dp"
+    tools:context="${relativePackage}.${activityClass}">
+    
+    <include layout="@layout/layout_user_bar_bottom" android:id="@+id/iBar" />
+
+    <FrameLayout 
+        android:id="@+id/flContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/iBar">
+    </FrameLayout>
+</RelativeLayout>

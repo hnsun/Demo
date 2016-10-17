@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/layoutWrapper"
+	android:padding="0dp"
+	android:background="@color/bgSetting"
+	android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}">
+    
+    <TextView 
+		style="@style/ForDetailInfoTitleTextView"
+		android:text="@string/title_setting_passcode" />
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+        
+        <Button 
+            style="@style/ForDetailInfoButton"
+            android:id="@+id/btnPasscodeState"
+            android:text="@string/btn_passcode_open" />
+        
+        <View style="@style/ForDetailInfoLine" />
+        
+        <Button 
+            style="@style/ForDetailInfoButton"
+            android:id="@+id/btnPasscodeUpdate"
+            android:text="@string/btn_passcode_update" />
+    </LinearLayout>
+    
+	<com.hnsun.myaccount.view.DescButton 
+	    style="@style/ForDetailInfoDescButton"
+	    android:id="@+id/btnSysDirectory"
+	    android:layout_marginTop="20dp"
+	    auto:nameSize="@dimen/txtv_detail_info_name"
+	    auto:nameColor="@color/txtTxtvDetailInfo"
+	    auto:nameText="@string/txt_sys_dir"
+	    auto:infoSize="@dimen/txtv_detail_info_desc"
+	    auto:infoColor="@color/txtTxtvDetailInfoDesc"
+	    auto:infoText="@string/txt_nothing" />
+</LinearLayout>

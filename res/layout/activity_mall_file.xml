@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/layoutWrapper"
+	android:padding="0dp"
+	android:orientation="horizontal"
+	android:baselineAligned="false"
+    tools:context="${relativePackage}.${activityClass}">
+	
+    <com.hnsun.myaccount.view.SlidingLinearLayout 
+        style="@style/DefaultSlidingLinearLayout"
+        android:id="@+id/sllContent">
+        
+	    <FrameLayout 
+	        android:id="@+id/flNavigation"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent" />
+	    
+	    <FrameLayout 
+	        android:id="@+id/flContent"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent" />
+    </com.hnsun.myaccount.view.SlidingLinearLayout>
+</LinearLayout>

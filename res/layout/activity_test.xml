@@ -1,0 +1,71 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/layoutWrapper"
+	android:padding="0dp"
+	android:background="@color/black"
+    tools:context="${relativePackage}.${activityClass}">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/wrapper_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                style="@style/ActTestButton"
+                android:id="@+id/btnTest1"
+                android:text="@string/btn_test"
+                android:background="@color/aliceblue" />
+
+            <Button
+                style="@style/ActTestButton"
+                android:id="@+id/btnTest2"
+                android:text="@string/btn_test"
+                android:background="@color/antiquewhite" />
+
+            <Button
+                style="@style/ActTestButton"
+                android:id="@+id/btnTest3"
+                android:text="@string/btn_test"
+                android:background="@color/aqua" />
+
+            <Button
+                style="@style/ActTestButton"
+                android:id="@+id/btnTest4"
+                android:text="@string/btn_test"
+                android:background="@color/aquamarine" />
+        </LinearLayout>
+    </ScrollView>
+    
+    <View 
+        style="@style/DefaultLayer"
+        android:id="@+id/vLayer" />
+	
+    <TextView 
+		style="@style/DefaultTestUnit"
+        android:id="@+id/txtvShow"
+		android:tag="#SKIN:"
+        android:textSize="@dimen/default_textsize"
+        android:textColor="@color/defaultFontNormal"
+        android:gravity="left|center_vertical"
+        android:scrollbars="vertical" />
+	
+   <ImageView 
+		style="@style/DefaultTestUnit"
+        android:id="@+id/ivShow"
+		android:tag="#SKIN:"
+		android:contentDescription="@null" />
+    
+    <WebView 
+		style="@style/DefaultTestUnit"
+        android:id="@+id/wvShow"
+		android:tag="#SKIN:"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/flayoutWrapper"
+	android:padding="0dp"
+	android:background="@color/bgUserContact"
+    tools:context="${relativePackage}.${activityClass}">
+    
+    <com.hnsun.myaccount.view.ClearEditText 
+        style="@style/DefaultClearEditText"
+        android:id="@+id/cetSearch"
+		android:tag="#SKIN:"
+        android:layout_alignParentTop="true"
+		android:layout_margin="5dp"
+        android:background="@drawable/et_search"
+        android:drawableLeft="@drawable/ic_search"
+        android:singleLine="true"
+        android:hint="@string/tip_keyword" />
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    	android:layout_below="@id/cetSearch"
+    	android:orientation="vertical">
+    	
+	    <RelativeLayout 
+	        style="@style/FrgUserContactItemLayout"
+	        android:id="@+id/rlRobot">
+	        
+	        <ImageView 
+	            style="@style/FrgUserContactItemImageView"
+		        android:id="@+id/ivIconRobot"
+	            android:src="@drawable/ic_contact_robot"
+	            android:contentDescription="@null" />
+	        
+		    <TextView 
+		        style="@style/FrgUserContactItemTextView"
+				android:tag="#SKIN:"
+		        android:layout_toRightOf="@id/ivIconRobot"
+	        	android:text="@string/app_robot_name" />
+	    </RelativeLayout>
+	    
+	    <View style="@style/FrgUserContactLine" />
+	    
+	    <RelativeLayout 
+	        style="@style/FrgUserContactItemLayout"
+	        android:id="@+id/rlLabel">
+	        
+	        <ImageView 
+	            style="@style/FrgUserContactItemImageView"
+		        android:id="@+id/ivIconLabel"
+	            android:src="@drawable/ic_contact_label"
+	            android:contentDescription="@null" />
+	        
+		    <TextView 
+		        style="@style/FrgUserContactItemTextView"
+				android:tag="#SKIN:"
+		        android:layout_toRightOf="@id/ivIconLabel"
+	        	android:text="@string/txt_label" />
+	    </RelativeLayout>
+	    
+	    <View style="@style/FrgUserContactLine" />
+	    
+	    <RelativeLayout 
+	        style="@style/FrgUserContactItemLayout"
+	        android:id="@+id/rlQrscan">
+	        
+	        <ImageView 
+	            style="@style/FrgUserContactItemImageView"
+		        android:id="@+id/ivIconQrscan"
+	            android:src="@drawable/ic_contact_qrscan"
+	            android:contentDescription="@null" />
+	        
+		    <TextView 
+		        style="@style/FrgUserContactItemTextView"
+				android:tag="#SKIN:"
+		        android:layout_toRightOf="@id/ivIconQrscan"
+	        	android:text="@string/txt_qrscan" />
+	    </RelativeLayout>
+	    
+	    <View style="@style/FrgUserContactLine" />
+	        
+	    <ListView 
+	        style="@style/DefaultListView"
+	        android:id="@+id/lvContent"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	    	android:padding="0dp" />
+    </LinearLayout>
+        
+    <TextView 
+        style="@style/DefaultTextView"
+        android:id="@+id/txtvDialog"
+		android:tag="#SKIN:"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:textSize="30sp"
+        android:textColor="@color/txtActUserContactDialog"
+        android:background="@drawable/bg_txtv_toast"
+        android:visibility="gone" />
+    
+    <com.hnsun.myaccount.view.LetterBarView 
+        style="@style/DefaultLetterBarView"
+        android:id="@+id/lbvBar"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/cetSearch" />
+    
+    <Button 
+        style="@style/DefaultButton"
+        android:id="@+id/btnAdd"
+		android:tag="#SKIN:"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="12dp"
+        android:textSize="45sp"
+        android:textColor="@color/txtActUserContactBtnAdd"
+        android:text="@string/pronoun_add"
+        android:background="@drawable/btn_oval" />
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/layoutWrapper"
+	android:padding="0dp"
+    tools:context="${relativePackage}.${activityClass}">
+    
+    <RelativeLayout 
+        android:id="@+id/rlActionBar"
+		android:tag="#SKIN:"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_actionbar_height"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@color/defaultActionBar">
+            
+	    <Button 
+			style="@style/DefaultButton"
+			android:id="@+id/btnBack"
+			android:layout_width="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+	        android:background="@drawable/btn_incolor"
+	        android:drawableLeft="@drawable/ic_arrow_left_actionbar" />
+    
+	    <TextView 
+	        style="@style/DefaultTextView"
+	        android:id="@+id/txtvUsername"
+	        android:layout_width="wrap_content"
+	        android:layout_centerInParent="true"
+	        android:textSize="18sp"
+	        android:textColor="@color/defaultActionBarTxt" />
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/rlBottomBar"
+		android:tag="#SKIN:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="3dp"
+        android:background="@color/defaultActionBar">
+	    
+        <Button 
+            style="@style/DefaultButton"
+            android:id="@+id/btnSend"
+	        android:layout_width="wrap_content"
+	        android:layout_height="43dp"
+        	android:layout_alignParentRight="true"
+        	android:layout_centerVertical="true"
+        	android:layout_marginLeft="4dp"
+        	android:layout_marginRight="4dp"
+            android:text="@string/btn_send"
+            android:textColor="@color/txtBtnSendNot"
+            android:background="@drawable/btn_business_send"
+			android:enabled="false" />
+    
+	    <EditText 
+	        style="@style/DefaultEditText"
+	        android:id="@+id/etMessage"
+	        android:layout_alignParentLeft="true"
+	        android:layout_toLeftOf="@id/btnSend"
+        	android:layout_centerVertical="true"
+        	android:layout_marginLeft="4dp"
+        	android:layout_marginRight="4dp"
+	        android:minHeight="40dp"
+	        android:textColor="@color/defaultFontNormal"
+	        android:background="@drawable/et_border" />
+    </RelativeLayout>
+    
+    <ListView 
+        style="@style/DefaultListView"
+        android:id="@+id/lvChat"
+        android:layout_below="@id/rlActionBar"
+        android:layout_above="@id/rlBottomBar"
+        android:dividerHeight="5dp">
+    </ListView>
+</RelativeLayout>

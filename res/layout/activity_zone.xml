@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/layoutWrapper"
+	android:padding="0dp"
+	android:background="@color/bgZone"
+	android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}">
+    
+    <TextView 
+		style="@style/ForDetailInfoTitleTextView"
+		android:text="@string/title_zone_article" />
+        
+	<Button 
+	    style="@style/ForDetailInfoButton"
+	    android:id="@+id/btnArticleContribution"
+	    android:text="@string/btn_article_contribute" />
+    
+    <TextView 
+		style="@style/ForDetailInfoTitleTextView"
+		android:text="@string/title_zone_file" />
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+        
+        <Button 
+            style="@style/ForDetailInfoButton"
+            android:id="@+id/btnLocalfile"
+            android:text="@string/btn_file_localfile" />
+        
+        <View style="@style/ForDetailInfoLine" />
+        
+        <Button 
+            style="@style/ForDetailInfoButton"
+            android:id="@+id/btnDownloadlist"
+            android:text="@string/btn_file_downloadlist" />
+    </LinearLayout>
+    
+    <TextView 
+		style="@style/ForDetailInfoTitleTextView"
+		android:text="@string/title_zone_commodity" />
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+        
+        <Button 
+            style="@style/ForDetailInfoButton"
+            android:id="@+id/btnShoppinglist"
+            android:text="@string/btn_commodity_shoppinglist" />
+        
+        <View style="@style/ForDetailInfoLine" />
+        
+        <Button 
+            style="@style/ForDetailInfoButton"
+            android:id="@+id/btnPurchased"
+            android:text="@string/btn_commodity_purchased" />
+    </LinearLayout>
+</LinearLayout>

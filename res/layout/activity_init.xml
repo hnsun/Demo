@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/layoutWrapper"
+	android:tag="#SKIN:"
+	android:background="@drawable/bg_activity_init"
+    tools:context="${relativePackage}.${activityClass}">
+
+    <com.hnsun.myaccount.view.BrandView
+        style="@style/DefaultBrandView"
+        android:layout_centerInParent="true"
+        android:background="@color/bgInitBrand"
+        auto:mainColor="@color/green"
+        auto:descColor="@color/black"
+        auto:mainSize="60sp"
+        auto:descSize="23sp" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        
+        <Button
+            style="@style/ActInitBtn"
+            android:id="@+id/btnUser"
+			android:tag="#SKIN:"
+            android:text="@string/btn_user" />
+        
+        <Button
+            style="@style/ActInitBtn"
+            android:id="@+id/btnTourist"
+			android:tag="#SKIN:"
+            android:text="@string/btn_tourist" />
+    </LinearLayout>
+</RelativeLayout>

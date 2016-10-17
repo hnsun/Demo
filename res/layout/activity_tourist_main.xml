@@ -1,0 +1,42 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	style="@style/DefaultWrapper"
+	android:id="@+id/layoutWrapper"
+	android:tag="#SKIN:"
+	android:padding="0dp"
+	android:background="@color/bgTourist"
+	android:scrollbars="none"
+    tools:context="${relativePackage}.${activityClass}">
+	
+	<LinearLayout 
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+    
+		<include layout="@layout/layout_home" />
+	    
+		<LinearLayout 
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+	        android:padding="10dp"
+			android:orientation="horizontal"
+			android:gravity="center">
+			
+		    <Button 
+		        style="@style/DefaultButton"
+		        android:id="@+id/btnLoginForword"
+				android:tag="#SKIN:"
+		        android:layout_width="wrap_content"
+		        android:textColor="@color/defaultTheme"
+		        android:text="@string/btn_login_forword"
+		       	android:background="@color/transparent" />
+		    
+		    <TextView 
+		        style="@style/DefaultTextView"
+		        android:id="@+id/txtvLoginDesc"
+		        android:layout_width="wrap_content"
+		        android:text="@string/msg_login_descfor" />
+		</LinearLayout>
+	</LinearLayout>
+</ScrollView>

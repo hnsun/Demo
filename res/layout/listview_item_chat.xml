@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/DefaultWrapper"
+	android:id="@+id/llayoutWrapper"
+    android:padding="0dp"
+    tools:context="${relativePackage}.${activityClass}">
+        
+    <TextView 
+        style="@style/DefaultTextView"
+        android:id="@+id/txtvTime"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/act_chat_time_margin_top"
+        android:layout_marginBottom="@dimen/act_chat_time_margin_bottom"
+        android:textSize="@dimen/txtv_act_chat_small"
+        android:background="@color/bgChatTxtvTime"
+        android:visibility="gone" />
+    
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/txtvTime">
+        
+	    <RelativeLayout 
+	        android:id="@+id/rlLeft"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:visibility="gone">
+	        
+		   <ImageView 
+		       style="@style/ActChatIconImageView"
+		       android:id="@+id/ivIconLeft"
+		       android:layout_alignParentLeft="true"
+		       android:contentDescription="@null" />
+	        
+		    <TextView 
+		        style="@style/ActChatMsgTextView"
+		        android:id="@+id/txtvMessageLeft"
+				android:tag="#SKIN:"
+		        android:layout_toRightOf="@id/ivIconLeft"
+		        android:layout_marginRight="@dimen/act_chat_txt_margin_security"
+		        android:paddingRight="15dp"
+		        android:background="@drawable/txtv_chatleft" />
+	    </RelativeLayout>
+    
+	    <RelativeLayout 
+	        android:id="@+id/rlRight"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:visibility="gone">
+	        
+		   <ImageView 
+		       style="@style/ActChatIconImageView"
+		       android:id="@+id/ivIconRight"
+		       android:layout_alignParentRight="true"
+		       android:contentDescription="@null" />
+	        
+		    <TextView 
+		        style="@style/ActChatMsgTextView"
+		        android:id="@+id/txtvMessageRight"
+				android:tag="#SKIN:"
+		        android:layout_toLeftOf="@id/ivIconRight"
+		        android:layout_marginLeft="@dimen/act_chat_txt_margin_security"
+		        android:paddingLeft="15dp"
+		        android:background="@drawable/txtv_chatright" />
+	    </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>

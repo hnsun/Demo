@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/DefaultWrapper"
+	android:id="@+id/dlayoutWrapper"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="@color/defaultDialog"
+    tools:context="${relativePackage}.${activityClass}">
+    
+    <TextView 
+        style="@style/DefaultTextView"
+        android:id="@+id/txtvContent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textSize="18sp"
+        android:gravity="center" />
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtvContent"
+        android:orientation="horizontal">
+        
+        <Button 
+	        style="@style/DiaIfButton"
+	        android:id="@+id/btnCancel"
+			android:tag="#SKIN:"
+	        android:text="@string/btn_cancel"
+	        android:background="@drawable/btn_rect_not" />
+        
+        <Button 
+	        style="@style/DiaIfButton"
+	        android:id="@+id/btnConfirm"
+			android:tag="#SKIN:"
+	        android:text="@string/btn_confirm"
+	        android:background="@drawable/btn_rect_yes" />
+    </LinearLayout>
+</RelativeLayout>
